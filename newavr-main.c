@@ -6,7 +6,8 @@
 #include <avr/interrupt.h>
 #include <avr/iom32a.h>
 #include <util/delay.h>
-//fewhgekahvtncwm8ovqiy3tvuae
+
+//SLAVE
 
 ISR(SPI_STC_vect) {
     char data = SPDR;
@@ -76,3 +77,26 @@ int main(void) {
     }
     return 0;
 }
+
+/* MASTER 
+char data;
+
+int main(void) {
+
+  
+    UART_init(9600);
+    SPI_init(Master, f_128);
+    SPI_enable();
+
+
+    while (1) {
+
+        data = UART_recieve();
+
+        SPI_send(data);
+        _delay_ms(200);
+
+
+    }
+}
+*/
