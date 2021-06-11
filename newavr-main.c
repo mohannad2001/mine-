@@ -8,6 +8,10 @@
 #include <util/delay.h>
 
 //SLAVE
+/*
+ The slave microcontroller recieved data from the master and this data starts to be compared by the defined variables to know what action will be taken 
+ * the data is defined as char so that it only 1 byte storage 
+ */
 
 ISR(SPI_STC_vect) {
     char data = SPDR;
@@ -79,6 +83,11 @@ int main(void) {
 }
 
 /* MASTER 
+ 
+ /*
+ The Master recieve the data from the UART the send it to the salve , as the data will be send SPI will be the same data for the data recived UART 
+ *   
+
 char data;
 
 int main(void) {
