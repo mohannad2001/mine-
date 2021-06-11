@@ -83,7 +83,7 @@ int main(void) {
 }
 
 
-/* MASTER 
+ /*MASTER 
  
  
  The Master recieve the data from the UART the send it to the salve , as the data will be send SPI will be the same data for the data recived UART 
